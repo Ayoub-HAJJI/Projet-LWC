@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-p-around_medium">
+        <lightning-datatable key-field="id" data={accounts} columns={columns}>
+        </lightning-datatable>
+
+
+    </div>
+
+
+    <div class="slds-float_right slds-size_1-of-1">
+        <template if:true={totalAccounts}>
+            <!--<c-pagination2 totalrecords={totalAccounts} page-size={pageSize} onpagination ​={handlePagination}></c-pagination2>-->
+        </template>
+    </div>
+</template> 

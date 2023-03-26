@@ -1,0 +1,40 @@
+<template>
+ <div style="display: flex; justify-content: space-between">
+    <lightning-input label="Name: " onchange={handleSearch}></lightning-input>
+    <lightning-input label="ASAIDPRS: " onchange={handleSearch1}></lightning-input>
+    <lightning-input label="BIL_ID: " onchange={handleSearch2}></lightning-input>
+    <lightning-input label="RC: " onchange={handleSearch3}></lightning-input>
+    <lightning-input label="ICE: " onchange={handleSearch4}></lightning-input>
+    <lightning-input label="Record Type: " onchange={handleSearch5}></lightning-input>
+</div>
+
+<br>
+<br>
+    
+    <table border="1px">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>ASAIDPRS</th>
+          <th>BIL_ID</th>
+          <th>RC</th>
+          <th>ICE</th>
+          <th>Record Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <template for:each={filteredAccounts} for:item="account">
+          <tr key={account.Id}>
+            <td>{account.Name}</td>
+            <td>{account.ASAIDPRS__c}</td>
+            <td>{account.BIL_ID__c}</td>
+            <td>{account.RC__c}</td>
+            <td>{account.ICE__c}</td>
+            <td>{account.RT}</td>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+   
+  </template>
+  
